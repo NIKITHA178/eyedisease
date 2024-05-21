@@ -1,0 +1,29 @@
+<MainLayout>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        id: img_path_label
+        text: "Selected Image: None"
+        size_hint_y: None
+        height: '40dp'
+
+    Button:
+        text: "Select Image"
+        size_hint_y: None
+        height: '50dp'
+        on_press: root.show_file_selection_dialog(self)
+
+    Image:
+        id: image_display
+        size_hint_y: 0.6
+
+    Label:
+        id: result_label
+        text: "Result: "
+        size_hint_y: None
+        height: '40dp'
+        text_size: self.width, None
+        halign: 'left'
+        valign: 'middle'
