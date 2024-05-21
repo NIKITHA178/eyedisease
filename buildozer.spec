@@ -14,6 +14,8 @@ source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
+source.exclude_exts = spec
+source.include_patterns = assets/*, images/*, models/*
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -37,9 +39,11 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow
+requirements = python3==3.7.6,hostpython3==3.7.6,opencv-python,cvzone,pillow
 
 # (str) Custom source folders for requirements
+# (list) Permissions
+android.permissions = INTERNET, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
@@ -74,7 +78,7 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = 1
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -431,7 +435,33 @@ warn_on_root = 1
 #data/audio/*.wav
 #data/images/original/*
 #
+# (str) Android logcat filters to use
+android.logcat_filters = *:S python:D
 
+# (str) Path to the JNI folder
+#jni_path = 
+
+# (str) Custom source folders
+#source.include_exts = py,png,jpg,kv,atlas
+source.include_patterns = models/*
+
+# (str) Gradle version
+android.gradle_dependencies = com.android.support:appcompat-v7:28.0.0
+
+# (list) Java source files to add to your classpath
+#java.source.include_exts = java
+
+# (str) Android NDK version to use
+#android.ndk_path = /opt/android-ndk-r19b
+
+# (str) Additional Java dependencies to be compiled into the APK
+#android.add_jars = libs/android/*.jar
+
+# (bool) Enable android API 21+ support (min. API level 21)
+android.api = 28
+
+# (str) Path to the directory containing the javaclass files
+#java.classpath = 
 
 #    -----------------------------------------------------------------------------
 #    Profiles
