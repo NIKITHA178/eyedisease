@@ -6,6 +6,7 @@ title = Eye Disease Classification
 package.name = eyediseaseclassification
 
 # (str) Package domain (needed for android/ios packaging)
+# Keep only one instance of this option
 package.domain = org.example
 
 # (str) Source code where the main.py file is located
@@ -40,9 +41,6 @@ android.ndk = 21b
 # (str) Android logcat filters to use
 android.logcat_filters = *:S python:D
 
-# (str) Packaging domain for Android/iOS
-package.domain = org.example
-
 # (bool) Enable the usage of Android's blacklist functionality
 android.blacklist_remove_default = False
 
@@ -85,9 +83,6 @@ android.ndk = 21b
 # (str) Android logcat filters to use
 android.logcat_filters = *:S python:D
 
-# (str) Packaging domain for Android/iOS
-package.domain = org.example
-
 # (bool) Enable the usage of Android's blacklist functionality
 android.blacklist_remove_default = False
 
@@ -105,9 +100,3 @@ source.exclude_exts = spec
 
 # (bool) Enable presplash screen
 #presplash.enabled = False
-
-# (str) Presplash screen used for loading. Default is None (no presplash).
-#presplash.filename = %(source.dir)s/images/presplash.png
-
-# (str) Icon of the application
-#icon.filename = %(source.dir)s/images/icon.png
