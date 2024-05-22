@@ -27,8 +27,8 @@ android.permissions = INTERNET, ACCESS_NETWORK_STATE, READ_EXTERNAL_STORAGE, WRI
 
 # (str) Supported Android SDK version
 android.minapi = 21
-android.targetapi = 30
-android.ndk = 21b
+android.targetapi = 31
+android.ndk = 25b
 
 # (str) The format used to package the application
 # Acceptable formats: kivy, pygame
