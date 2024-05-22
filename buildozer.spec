@@ -19,7 +19,6 @@ version = 0.1
 entrypoint = main.py
 
 # (list) Application requirements (comma separated)
-# Ensure all dependencies are listed here
 requirements = python3, kivy, opencv-python-headless, cvzone, pillow, numpy
 
 # (list) Permissions
