@@ -20,7 +20,7 @@ entrypoint = main.py
 
 # (list) Application requirements (comma separated)
 # Ensure all dependencies are listed here
-requirements = python3, kivy, opencv-python-headless, cvzone, pillow, numpy, kivymd
+requirements = python3, kivy, opencv-python-headless, cvzone, pillow, numpy
 
 # (list) Permissions
 android.permissions = INTERNET, ACCESS_NETWORK_STATE, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
@@ -52,10 +52,11 @@ presplash.color = #ffffff
 android.additional_build_options = --release
 
 # (str) Path to custom keystore for signing
-android.keystore = path/to/keystore
-android.keystore_pass = password
-android.key_alias = alias
-android.key_alias_pass = alias_password
+# Uncomment and set these if you have a keystore for signing
+# android.keystore = path/to/keystore
+# android.keystore_pass = password
+# android.key_alias = alias
+# android.key_alias_pass = alias_password
 
 # (bool) Indicate if the application is a service
 android.service = False
@@ -65,10 +66,18 @@ android.service = False
 build_dir = build
 
 # (str) Custom build configuration
-android.custom_build = src/custom_build
+# android.custom_build = src/custom_build
 
 # (str) Extra files to include in the package
-android.extra_files = src/extra_files
+# android.extra_files = src/extra_files
 
 # (list) Android build options
 android.build_options = --release
+
+# (bool) Enable the debug log
+log_level = 2
+
+[buildozer]
+
+# (bool) Use the build cache
+use_build_cache = True
